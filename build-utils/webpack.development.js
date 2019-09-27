@@ -4,8 +4,13 @@ module.exports = () => ({
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        test: /\.css|\.s(c|a)ss$/,
+        use: [{ 
+          loader: 'polymer-css-loader', 
+          options: { 
+            defaultSkip: true 
+          } 
+        }, 'extract-loader', 'css-loader', 'sass-loader']
       }
     ]
   },

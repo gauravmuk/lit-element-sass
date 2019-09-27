@@ -52,3 +52,7 @@ header {
   background: var(--dark-color);
   color: var(--base-color);
 }
+
+.yellow {
+  border: 2px solid black;
+}
